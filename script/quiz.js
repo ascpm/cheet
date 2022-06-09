@@ -5,13 +5,13 @@ function retry_set(_val) {
         $("#munje_" + thisMunjeNum).find(".relPop").find(".pop_retryBtn").hide();
         $("#munje_" + thisMunjeNum).find(".relPop").fadeIn(function () {
             retry_c = 0;
-            clearInterval(0);
+            clearInterval(retry_timer);
             $("#munje_" + thisMunjeNum).find(".relPop").find(".tit3").fadeOut();
             $("#munje_" + thisMunjeNum).find(".relPop").find(".pop_retryBtn").fadeIn();
             clickSnd(3);
         });
     } else {
-        clearInterval(0);
+        clearInterval(retry_timer);
         $("#munje_" + thisMunjeNum).find(".relPop").fadeOut();
         $("#munje_" + thisMunjeNum).find(".relPop").find(".time").html(0);
     }
